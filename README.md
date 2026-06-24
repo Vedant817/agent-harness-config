@@ -14,9 +14,9 @@ exact same harness.
 ## One-time setup per machine
 
 ```bash
-git clone https://github.com/<you>/agent-harness.git ~/agent-harness
+git clone https://github.com/Vedant817/agent-harness-config.git ~/agent-harness
 cd ~/agent-harness
-./scripts/bootstrap.sh <you>/agent-harness
+./scripts/bootstrap.sh Vedant817/agent-harness-config
 ```
 
 This does two things:
