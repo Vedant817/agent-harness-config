@@ -1,0 +1,30 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "default_agent": "planner",
+  "agent": {
+    "planner": {
+      "description": "Expands a short (1-4 sentence) prompt into a full spec and picks the right criteria profile. Use at the very start of any new build, feature set, or subsystem — before any code is written.",
+      "mode": "subagent",
+      "model": "anthropic/claude-opus-4-5"
+    },
+    "generator": {
+      "description": "Implements one unit of work (sprint/module/service/stage) at a time from .harness/spec.md. Use for all actual implementation work once a spec exists.",
+      "mode": "subagent",
+      "model": "anthropic/claude-sonnet-4-6"
+    },
+    "evaluator": {
+      "description": "Reviews the Generator's contract proposals before build starts, and grades finished units against .harness/criteria.md with hard thresholds afterward. Use after every Generator contract proposal and after every handoff.",
+      "mode": "subagent",
+      "model": "anthropic/claude-opus-4-5"
+    }
+  },
+  "skills": {
+    "paths": ["./skills"]
+  },
+  "mcp": {
+    "playwright": {
+      "type": "local",
+      "command": ["npx", "-y", "@playwright/mcp@latest"]
+    }
+  }
+}
