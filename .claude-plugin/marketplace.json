@@ -1,0 +1,18 @@
+{
+  "name": "agent-harness-marketplace",
+  "owner": { "name": "Vedant" },
+  "metadata": {
+    "description": "Personal marketplace hosting the agent-harness plugin so it installs identically on any machine.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "agent-harness",
+      "source": "./",
+      "description": "Planner / Generator / Evaluator harness for long-running autonomous coding",
+      "version": "0.1.0",
+      "category": "workflow",
+      "tags": ["multi-agent", "planning"]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+# Codex config for the agent-harness setup.
+# Verify field names against `codex --help` / the current config reference on
+# your installed version before relying on this — the CLI surface here moves
+# fast and some of this may have been renamed since this file was written.
+
+[profiles.planner]
+model = "gpt-5.1"
+approval_policy = "never"
+sandbox_mode = "workspace-write"
+
+[profiles.generator]
+model = "gpt-5.1-codex"
+approval_policy = "never"
+sandbox_mode = "workspace-write"
+
+[profiles.evaluator]
+model = "gpt-5.1"
+approval_policy = "never"
+sandbox_mode = "workspace-write"
+
+# Wire the same browser-driving MCP server the Claude Code side uses.
+[mcp_servers.playwright]
+command = "npx"
+args = ["-y", "@playwright/mcp@latest"]

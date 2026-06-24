@@ -1,0 +1,13 @@
+{
+  "name": "agent-harness",
+  "displayName": "Agent Harness (Planner / Generator / Evaluator)",
+  "version": "0.1.0",
+  "description": "Portable planner-generator-evaluator harness for long-running autonomous builds. Works across project types (web app, backend service, CLI tool, devops/infra) by reading a per-project criteria profile.",
+  "author": { "name": "Vedant" },
+  "license": "MIT",
+  "keywords": ["harness", "multi-agent", "long-running-agents"],
+  "agents": "./agents",
+  "hooks": "./hooks",
+  "skills": "./skills",
+  "mcpServers": "./.mcp.json"
+}
