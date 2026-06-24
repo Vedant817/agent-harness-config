@@ -76,6 +76,4 @@ Strip, don't just add.
   against the schema documented at the time this repo was created — confirm
   against `codex --help` / the current config reference before relying on
   them, especially `approval_policy` and `sandbox_mode` naming.
-- Don't commit secrets into this repo — plugins and AGENTS.md content run
-  with your full local privileges, including on every machine you bootstrap.
 - `criteria/` is the thing actually worth iterating on over time.
